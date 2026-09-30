@@ -1,0 +1,10 @@
+name: phishing_streamlit_env
+
+channels:
+  - snowflake
+
+dependencies:
+  - streamlit
+  - pandas
+  - scikit-learn
+  - joblib

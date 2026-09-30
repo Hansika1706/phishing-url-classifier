@@ -1,0 +1,151 @@
+# Phishing URL Classification using Snowflake ML
+
+## 📌 Project Overview
+
+Phishing URL Classification is a machine learning classification project developed using **Python, Scikit-learn, Snowflake and Streamlit**.
+
+The system analyzes characteristics extracted from a URL and predicts whether the URL is likely to be a **legitimate URL or a phishing URL**.
+
+The trained machine learning model is deployed as an interactive Streamlit application in Snowflake.
+
+## 🎯 Objective
+
+The main objective of this project is to develop a machine learning model that can classify URLs based on extracted URL characteristics and provide a prediction through an interactive web application.
+
+## 📊 Dataset
+
+**Dataset:** Phishing URL Dataset with Extracted Features
+
+**Source:** Kaggle
+
+**Dataset Link:**
+https://www.kaggle.com/datasets/victusadi/phishing-urls-dataset-with-extracted-features
+
+The dataset contains URLs along with extracted features used for phishing URL classification.
+
+## 🔍 Features Used
+
+The machine learning pipeline uses the following 11 input features:
+
+* URL_LENGTH
+* NUM_DOTS
+* HAS_HTTPS
+* HAS_IP
+* NUM_SUBDIRS
+* NUM_PARAMS
+* SUSPICIOUS_WORDS
+* TLD
+* SPECIAL_CHAR_COUNT
+* DIGITS_COUNT
+* ENTROPY
+
+## 🤖 Machine Learning Model
+
+### Random Forest Classifier
+
+A **Random Forest Classifier** was trained for the phishing URL classification task.
+
+The saved model includes the complete preprocessing and classification pipeline.
+
+The preprocessing pipeline includes:
+
+* Missing-value imputation
+* StandardScaler for numerical features
+* One-hot encoding for the TLD feature
+* Random Forest classification
+
+
+
+## 🔄 Project Workflow
+
+```text
+Dataset
+   ↓
+Data Cleaning
+   ↓
+Feature Extraction
+   ↓
+Feature Preprocessing
+   ↓
+Train/Test Split
+   ↓
+Random Forest Training
+   ↓
+Model Evaluation
+   ↓
+Model Saving
+   ↓
+Snowflake Deployment
+   ↓
+Streamlit Application
+   ↓
+Phishing URL Prediction
+```
+
+## 🖥️ Streamlit Application
+
+The Streamlit application allows users to enter a URL and receive a phishing classification.
+
+### Application Features
+
+* URL input
+* URL validation
+* Automatic feature extraction
+* Phishing prediction
+* Legitimate URL prediction
+* Phishing probability
+* Prediction probabilities
+* Extracted URL features
+* URL analysis
+
+## ☁️ Deployment
+
+The application was deployed using **Snowflake Streamlit**.
+
+**Application:** Phishing URL Classifier
+
+**Platform:** Snowflake
+
+**Runtime:** Snowflake Warehouse Runtime
+
+## 🛠️ Technologies Used
+
+* Python
+* Snowflake
+* Snowpark
+* Streamlit
+* Pandas
+* Scikit-learn
+* Joblib
+* Random Forest
+* One-Hot Encoding
+* StandardScaler
+
+## 📁 Project Files
+
+```text
+phishing-url-classifier/
+│
+├── app.py
+├── phishing_url_random_forest.pkl
+├── requirements.txt
+├── environment.yml
+└── README.md
+```
+
+## 🚀 Deployed Application
+
+The Phishing URL Classifier is deployed using **Snowflake Streamlit**.
+
+**Application:** Phishing URL Classifier - Snowflake
+
+**Platform:** Snowflake
+
+**Live Application:** https://app.snowflake.com/jogyatq/ya09950/#/streamlit-apps/PHISHING_ML_DB.PHISHING.PHISHING_URL_APP
+
+
+## 📌 Conclusion
+
+This project demonstrates an end-to-end machine learning workflow for phishing URL classification, from feature extraction and model training to deployment using Snowflake Streamlit.
+
+The project provides an interactive application where users can enter a URL and receive a machine learning-based classification along with probability and extracted feature information.
